@@ -8,12 +8,12 @@ public class Login extends JFrame{
 	Container con = getContentPane();
 	private static final long serialVersionUID = 1L;
 	static JPanel loginPanel = new JPanel(new GridLayout(3, 2));
-	private JButton BuyerSearchBtn = new JButton("±¸¸ÅÀÚ");
-	private JButton loginBtn = new JButton("°ü¸®ÀÚ");
+	private JButton BuyerSearchBtn = new JButton("êµ¬ë§¤ì");
+	private JButton loginBtn = new JButton("ê´€ë¦¬ì");
 	
 
 	public Login() {
-		super("ÀÔÃâ·Â °ü¸® ½Ã½ºÅÛ");
+		super("ì…ì¶œë ¥ ê´€ë¦¬ ì‹œìŠ¤í…œ");
 		setLayout(new BoxLayout(con, BoxLayout.Y_AXIS));
 		
 		this.setContentPane(loginPanel);
@@ -21,7 +21,7 @@ public class Login extends JFrame{
 		loginPanel.add(BuyerSearchBtn);
 		loginPanel.add(loginBtn);
 		
-		//ÇöÀç ÇÁ·¹ÀÓ Ã¢ °¡¿îµ¥ Á¤·Ä setSize¸¦ ¸ÕÀú ÇØÁÖ¾î¾ß Á¤»óÀûÀ¸·Î ÇÁ·¹ÀÓÀÌ °¡¿îµ¥ Á¤·ÄÀÌ µÊ!
+		//í˜„ì¬ í”„ë ˆì„ ì°½ ê°€ìš´ë° ì •ë ¬ setSizeë¥¼ ë¨¼ì € í•´ì£¼ì–´ì•¼ ì •ìƒì ìœ¼ë¡œ í”„ë ˆì„ì´ ê°€ìš´ë° ì •ë ¬ì´ ë¨!
 		setSize(370, 300);
         setVisible(true);
 		this.setLocationRelativeTo(null);		
@@ -29,7 +29,7 @@ public class Login extends JFrame{
 		this.setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		
-		//±¸¸ÅÀÚ ¹öÆ° ´­·¶À» ¶§
+		//êµ¬ë§¤ì ë²„íŠ¼ ëˆŒë €ì„ ë•Œ
 		BuyerSearchBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -38,7 +38,7 @@ public class Login extends JFrame{
 			}
 		});
 		
-		//°ü¸®ÀÚ ¹öÆ° ´­·¶À» ¶§
+		//ê´€ë¦¬ì ë²„íŠ¼ ëˆŒë €ì„ ë•Œ
 		loginBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -49,6 +49,11 @@ public class Login extends JFrame{
 	}
 		
 		public static void main(String[] args) {
+			Sheets service = getSheetsService(AuthMode.OAUTH20);
+       			Sheets service = getSheetsService(AuthMode.SERVICE_ACCOUNT);
+
+  			String spreadsheetId = "1A1SXyBEA4zfDuUdg6dN-tV52OENYmvnka9rv8ivp6xY";
+
 			new Login();
 		
 		}
