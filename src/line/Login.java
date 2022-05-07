@@ -66,12 +66,11 @@ public class Login extends JFrame{
       		for (List row : values) { 
       			if (row.size() > 0) { 
       				System.out.println(row.get(0).toString());
-      			}	
-      		}
-         }
-    }
-		
-		}
+      				}	
+      			}
+	         }
+	    }
 	}
+	
 
 		
