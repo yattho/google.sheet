@@ -48,13 +48,28 @@ public class Login extends JFrame{
 		});
 	}
 		
-		public static void main(String[] args) {
-			Sheets service = getSheetsService(AuthMode.OAUTH20);
-       			Sheets service = getSheetsService(AuthMode.SERVICE_ACCOUNT);
+	public static void main(String[] args) throws IOExeption {
+                        
+       Sheets service = getSheetsService(AuthMode.OAUTH20);
+       Sheets service = getSheetsService(AuthMode.SERVICE_ACCOUNT);
 
-  			String spreadsheetId = "1A1SXyBEA4zfDuUdg6dN-tV52OENYmvnka9rv8ivp6xY";
-
-			new Login();
+       String spreadsheetId = "1A1SXyBEA4zfDuUdg6dN-tV52OENYmvnka9rv8ivp6xY";
+       
+       String range = "A3:A11";
+       ValueRange response = service.spreadsheets().values()
+                .get(spreadsheetId, range)
+                .execute();
+      List<List<Object>> values = response.getValues();
+      if (values == null || values.size() == 0) { 
+     	System.out.println("No data found."); 
+      } else { 
+      		for (List row : values) { 
+      			if (row.size() > 0) { 
+      				System.out.println(row.get(0).toString());
+      			}	
+      		}
+         }
+    }
 		
 		}
 	}
