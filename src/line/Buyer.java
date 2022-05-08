@@ -1,35 +1,4 @@
 package line;
-//
-//public class Buyer extends  JFrame{
-//    private static final long serialVersionUID = 1L;
-//
-//	Buyer(){
-//    	super("제품 위치 검색"); //타이틀
-//        JPanel jPanel = new JPanel(new GridLayout(3, 2));
-//    	JLabel idLabel = new JLabel("주문자 번호 ");
-//    	JTextField idText = new JTextField();
-//
-//    	
-//    	add(jPanel);
-//    	add(idLabel);
-//    	add(idText);
-//    	
-//
-//        setSize(350, 150);
-//        this.setLocationRelativeTo(null);		
-//		
-//		this.setVisible(true);
-//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-//
-//
-//        Dimension frameSize = getSize();
-//        Dimension windowSize = Toolkit.getDefaultToolkit().getScreenSize();
-//        setLocation((windowSize.width - frameSize.width) / 2,
-//                (windowSize.height - frameSize.height) / 2); //화면 중앙에 띄우기
-//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//        setVisible(true);
-//		}
-//	}
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -94,7 +63,7 @@ public class Buyer extends JFrame{
      
 	public static void main(String[] args) throws IOExeption {
                      new Buyer();    
-       Sheets service = getSheetsService(AuthMode.OAUTH20);
+   //    Sheets service = getSheetsService(AuthMode.OAUTH20);
        Sheets service = getSheetsService(AuthMode.SERVICE_ACCOUNT);
 
        String spreadsheetId = "1A1SXyBEA4zfDuUdg6dN-tV52OENYmvnka9rv8ivp6xY";
