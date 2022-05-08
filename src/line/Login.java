@@ -68,7 +68,7 @@ public class Login extends JFrame{
 		
 	public static void main(String[] args) throws IOExeption {
                         
-       Sheets service = getSheetsService(AuthMode.OAUTH20);
+//       Sheets service = getSheetsService(AuthMode.OAUTH20);
        Sheets service = getSheetsService(AuthMode.SERVICE_ACCOUNT);
 
        String spreadsheetId = "1A1SXyBEA4zfDuUdg6dN-tV52OENYmvnka9rv8ivp6xY";
